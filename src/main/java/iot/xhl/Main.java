@@ -57,7 +57,7 @@ public class Main {
             while ((line = br.readLine()) != null && row < 2570) {
                 String[] values = line.split(",");
                 int[] result = Arrays.stream(indices)
-                        .map(i -> Integer.parseInt(values[i] + 1))
+                        .map(i -> Integer.parseInt(values[i + 1]))
                         .toArray();
                 data[row] = result;
                 row++;
